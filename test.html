@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bright Star Gym - Premium Fitness Center</title>
+  <meta name="description" content="Transform your body and mind at Bright Star Gym. State-of-the-art facilities, expert trainers, and personalized workout plans.">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  
+</head>
+
+<body>
+  <!-- Progress bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <h1 class="logo"><img src="studio_logo_6CDDF70F534266.webp" alt="Bright Star Logo">BRIGHT<span>STAR</span></h1>
+
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" onclick="closeMenu()">Home</a></li>
+      <li><a href="#about" onclick="closeMenu()">About</a></li>
+      <li><a href="#services" onclick="closeMenu()">Services</a></li>
+      <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
+      <li><a href="#trainers" onclick="closeMenu()">Trainers</a></li>
+      <li><a href="demo.html" onclick="closeMenu()">Products</a></li>
+      <li><a href="#contact" class="btn btn-outline" onclick="closeMenu()">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="floating-elements" id="floatingElements"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Transform Your Body At <span>Bright Star Gym</span></h1>
+        <p>Premium fitness center with state-of-the-art facilities, expert trainers, and personalized workout plans to help you achieve your fitness goals.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn pulse">Get Started Today</a>
+          <a href="#gallery" class="btn btn-outline">View Our Facilities</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number" id="membersCount">0</div>
+          <div class="stat-label">Happy Members</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="trainersCount">0</div>
+          <div class="stat-label">Expert Trainers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="classesCount">0</div>
+          <div class="stat-label">Fitness Classes</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="yearsCount">0</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="floating-circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </div>
+    <h2 class="section-title animate-on-scroll">About Our Gym</h2>
+    <p class="section-subtitle animate-on-scroll">Discover what makes Bright Star Gym the premier fitness destination in the city</p>
+    
+    <div class="about-container">
+      <div class="about-img animate-on-scroll">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="About Our Gym" />
+      </div>
+      <div class="about-content animate-on-scroll">
+        <h2>Why Choose Bright Star Gym?</h2>
+        <p>At Bright Star Gym, we believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym. That's why we offer top-class facilities at affordable prices with the most professional trainers in the industry.</p>
+        <p>Our 10,000 sq. ft. facility is equipped with the latest cardio and strength training equipment, dedicated functional training zones, and a wide range of group exercise classes.</p>
+        
+        <div class="about-features">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-dumbbell"></i></div>
+            <div class="feature-text">
+              <h4>Modern Equipment</h4>
+              <p>Cutting-edge machines from leading fitness brands for optimal workouts.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
+            <div class="feature-text">
+              <h4>Certified Trainers</h4>
+              <p>Our trainers hold certifications from internationally recognized institutions.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-heartbeat"></i></div>
+            <div class="feature-text">
+              <h4>Personalized Plans</h4>
+              <p>Custom workout and nutrition plans tailored to your specific goals.</p>
+            </div>
+          </div>
+        </div>
+        
+        <a href="#services" class="btn">Explore Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h2 class="section-title animate-on-scroll">Our Services</h2>
+    <p class="section-subtitle animate-on-scroll">We offer comprehensive fitness solutions to meet all your health and wellness needs</p>
+    
+    <div class="services-container">
+      <div class="service-card animate-on-scroll">
+        <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
+        <h3>Strength Training</h3>
+        <p>Build muscle and increase strength with our comprehensive weight training programs using free weights and machines.</p>
+        <a href="#contact" class="btn">Learn More</a>
+      </div>
+      <div class="service-card animate-on-scroll">
+        <div class="service-icon"><i class="fas fa-running"></i></div>
+        <h3>Cardio Programs</h3>
+        <p>Boost your endurance with high-energy workouts designed to burn calories and improve cardiovascular health.</p>
+        <a href="#contact" class="btn">Learn More</a>
+      </div>
+      <div class="service-card animate-on-scroll">
+        <div class="service-icon"><i class="fas fa-spa"></i></div>
+        <h3>Yoga & Pilates</h3>
+        <p>Improve flexibility, balance and mental clarity with our expert-led yoga and pilates sessions.</p>
+        <a href="#contact" class="btn">Learn More</a>
+      </div>
+      <div class="service-card animate-on-scroll">
+        <div class="service-icon"><i class="fas fa-child"></i></div>
+        <h3>Personal Training</h3>
+        <p>One-on-one coaching with certified trainers to help you achieve your specific fitness goals faster.</p>
+        <a href="#contact" class="btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery" id="gallery">
+    <h2 class="section-title animate-on-scroll">Our Gallery</h2>
+    <p class="section-subtitle animate-on-scroll">Take a virtual tour of our world-class facilities and vibrant community</p>
+    
+    <div class="gallery-container animate-on-scroll">
+      <div class="gallery-slider">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Gym Facility">
+          <div class="gallery-caption">
+            <h3>Main Workout Area</h3>
+            <p>Spacious area with premium equipment</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Weight Training">
+          <div class="gallery-caption">
+            <h3>Weight Training Zone</h3>
+            <p>Comprehensive free weights section</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1571019614243-c7780a35c8a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cardio Area">
+          <div class="gallery-caption">
+            <h3>Cardio Section</h3>
+            <p>Latest cardio machines with entertainment</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Group Class">
+          <div class="gallery-caption">
+            <h3>Group Classes</h3>
+            <p>Energetic group workout sessions</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Functional Training">
+          <div class="gallery-caption">
+            <h3>Functional Zone</h3>
+            <p>TRX, battle ropes and more</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Locker Room">
+          <div class="gallery-caption">
+            <h3>Luxury Locker Rooms</h3>
+            <p>Spacious and well-equipped</p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-nav">
+        <div class="gallery-dot active"></div>
+        <div class="gallery-dot"></div>
+        <div class="gallery-dot"></div>
+        <div class="gallery-dot"></div>
+        <div class="gallery-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainers Section -->
+  <section class="trainers" id="trainers">
+    <h2 class="section-title animate-on-scroll">Meet Our Trainers</h2>
+    <p class="section-subtitle animate-on-scroll">Our certified professionals are dedicated to helping you achieve your fitness goals</p>
+    
+    <div class="trainers-container">
+      <div class="trainer-card animate-on-scroll">
+        <div class="trainer-img">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Trainer Avinash">
+          <div class="trainer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="trainer-info">
+          <h3>Avinash C</h3>
+          <p>Head Strength Coach</p>
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="bio">With 12 years of experience in bodybuilding and strength training, Avinash specializes in hypertrophy and powerlifting techniques.</p>
+          <div class="trainer-skills">
+            <span class="skill-tag">Bodybuilding</span>
+            <span class="skill-tag">Powerlifting</span>
+            <span class="skill-tag">Nutrition</span>
+          </div>
+        </div>
+      </div>
+      <div class="trainer-card animate-on-scroll">
+        <div class="trainer-img">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80" alt="Trainer Avinash K">
+          <div class="trainer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="trainer-info">
+          <h3>Avinash K</h3>
+          <p>Yoga & Mobility Expert</p>
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="bio">Certified in Hatha, Vinyasa and Yin yoga, Avinash K helps clients improve flexibility, mobility and mental wellbeing.</p>
+          <div class="trainer-skills">
+            <span class="skill-tag">Yoga</span>
+            <span class="skill-tag">Mobility</span>
+            <span class="skill-tag">Meditation</span>
+          </div>
+        </div>
+      </div>
+      <div class="trainer-card animate-on-scroll">
+        <div class="trainer-img">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Trainer Rahul">
+          <div class="trainer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="trainer-info">
+          <h3>Rahul M</h3>
+          <p>Functional Fitness Coach</p>
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="bio">Specializing in HIIT and functional movement patterns, Rahul creates dynamic workouts that translate to real-world strength.</p>
+          <div class="trainer-skills">
+            <span class="skill-tag">HIIT</span>
+            <span class="skill-tag">Functional Training</span>
+            <span class="skill-tag">Endurance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2 class="section-title animate-on-scroll">What Our Members Say</h2>
+    <p class="section-subtitle animate-on-scroll">Success stories from our happy members</p>
+    
+    <div class="testimonials-container animate-on-scroll">
+      <div class="testimonial-slider">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Joining Bright Star Gym was the best decision I made for my health. The trainers are knowledgeable and the community is so supportive. I've lost 15kg in 3 months!"</p>
+          <div class="testimonial-author">
+            <div class="author-img">
+              <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Priya K">
+            </div>
+            <div class="author-info">
+              <h4>Priya K</h4>
+              <p>Member since 2022</p>
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"The personal training sessions with Avinash have transformed my strength and physique. His attention to form and technique is unmatched."</p>
+          <div class="testimonial-author">
+            <div class="author-img">
+              <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Rahul S">
+            </div>
+            <div class="author-info">
+              <h4>Rahul S</h4>
+              <p>Member since 2021</p>
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"The yoga classes have not only improved my flexibility but also helped me manage stress. The instructors are amazing and the facility is always clean."</p>
+          <div class="testimonial-author">
+            <div class="author-img">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ananya P">
+            </div>
+            <div class="author-info">
+              <h4>Ananya P</h4>
+              <p>Member since 2023</p>
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <!-- <section class="pricing" id="pricing">
+    <h2 class="section-title animate-on-scroll">Membership Plans</h2>
+    <p class="section-subtitle animate-on-scroll">Affordable pricing for every fitness goal</p>
+    
+    <div class="pricing-container">
+      <div class="pricing-card animate-on-scroll">
+        <h3>Basic</h3>
+        <div class="price">₹1,999<span>/month</span></div>
+        <ul class="pricing-features">
+          <li>Access to gym facilities</li>
+          <li>Free weights & machines</li>
+          <li>Cardio area</li>
+          <li>Locker room access</li>
+          <li>1 free class per month</li>
+        </ul>
+        <a href="#contact" class="btn">Join Now</a>
+      </div>
+      <div class="pricing-card animate-on-scroll popular">
+        <div class="popular-tag">Most Popular</div>
+        <h3>Premium</h3>
+        <div class="price">₹3,499<span>/month</span></div>
+        <ul class="pricing-features">
+          <li>All Basic features</li>
+          <li>Unlimited group classes</li>
+          <li>Sauna & steam access</li>
+          <li>2 personal training sessions</li>
+          <li>Nutrition consultation</li>
+        </ul>
+        <a href="#contact" class="btn">Join Now</a>
+      </div>
+      <div class="pricing-card animate-on-scroll">
+        <h3>Elite</h3>
+        <div class="price">₹5,999<span>/month</span></div>
+        <ul class="pricing-features">
+          <li>All Premium features</li>
+          <li>Unlimited personal training</li>
+          <li>24/7 gym access</li>
+          <li>Body composition analysis</li>
+          <li>Custom meal plans</li>
+        </ul>
+        <a href="#contact" class="btn">Join Now</a>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2 class="section-title animate-on-scroll">Get In Touch</h2>
+    <p class="section-subtitle animate-on-scroll">We'd love to hear from you and help you start your fitness journey</p>
+    
+    <div class="contact-container">
+      <div class="contact-info animate-on-scroll">
+        <h3>Contact Information</h3>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="info-text">
+            <h4>Our Location</h4>
+            <p>Bungalow Plot No.102 WPR DP 1. Gorai Link RD., Near Suvidya School,OPP Maru Ghar & Union Bank, Mumbai, Maharashtra 400091</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+          <div class="info-text">
+            <h4>Phone Number</h4>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-envelope"></i></div>
+          <div class="info-text">
+            <h4>Email Address</h4>
+            <a href="mailto:info@brightstargym.com">info@brightstargym.com</a>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-clock"></i></div>
+          <div class="info-text">
+            <h4>Working Hours</h4>
+            <p>Monday - Friday: 6:00 AM - 10:00 PM<br>Saturday - Sunday: 7:00 AM - 8:00 PM</p>
+          </div>
+        </div>
+        
+        <div class="contact-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/brightstarfitness_borivali/"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      
+      <div class="contact-map animate-on-scroll">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.123456789012!2d72.79812345678901!3d19.231234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b13affffffff%3A0x1234567890abcdef!2sBungalow%20Plot%20No.102%20WPR%20DP%201%2C%20Gorai%20Link%20RD.%2C%20Near%20Suvidya%20School%2C%20OPP%20Maru%20Ghar%20%26%20Union%20Bank%2C%20Mumbai%2C%20Maharashtra%20400091!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" 
+          allowfullscreen="" 
+          loading="lazy"
+          title="Bright Star Gym Location"
+        ></iframe>
+      </div>
+        </div>
+  </section>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/919876543210?text=Hi%20Bright%20Star%20Gym,%20I'm%20interested%20in%20joining%20your%20gym" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tooltip">Chat with us</span>
+  </a>
+
+  <!-- Back to Top Button -->
+  <a href="#home" class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>About Us</h4>
+        <p>Bright Star Gym is a premium fitness center dedicated to helping our members achieve their health and wellness goals through state-of-the-art facilities and expert guidance.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/brightstarfitness_borivali/"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Personal Training</a></li>
+          <li><a href="#services">Group Classes</a></li>
+          <li><a href="#services">Yoga & Pilates</a></li>
+          <li><a href="#services">Nutrition Plans</a></li>
+          <li><a href="#services">Body Analysis</a></li>
+          <li><a href="#services">Corporate Wellness</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Bright Star Gym. All Rights Reserved. Designed by <a href="#">YourName</a></p>
+    </div>
+  </footer>
+
+ 
+
+<script src="script.js"></script>
+
+</body>
+</html>
