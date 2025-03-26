@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bright Star Gym - Premium Protein Products</title>
+  <meta name="description" content="Discover our premium selection of protein supplements to fuel your fitness journey at Bright Star Gym.">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-color: #4b8b3b; /* Healthy green */
+      --secondary-color: #f5a623; /* Accent orange */
+      --dark-color: #2c3e50;
+      --light-color: #f8f9fa;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    body {
+      background-color: #f9f9f7;
+      color: var(--dark-color);
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header */
+    .product-header {
+      background: linear-gradient(rgba(10, 25, 47, 0.98), rgba(10, 25, 47, 0.7)), 
+                  url('https://images.unsplash.com/photo-1515825838458-f2a94b20105a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+      color: white;
+      text-align: center;
+      padding: 5rem 0;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    
+    .product-header-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .product-header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    
+    .product-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      opacity: 0.9;
+    }
+    
+    /* Back to Home Button */
+    .back-to-home {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+    
+    .back-to-home a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      transition: var(--transition);
+    }
+    
+    .back-to-home a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .back-to-home i {
+      margin-right: 8px;
+    }
+    
+    /* Product Benefits */
+    .product-benefits {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 3rem 0;
+      gap: 1.5rem;
+    }
+    
+    .benefit-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      width: 22%;
+      min-width: 200px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .benefit-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .benefit-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    
+    /* Product Gallery */
+    .product-gallery-container {
+      width: 100%;
+      overflow-x: auto;
+      padding: 1rem 0;
+      margin: 2rem 0;
+    }
+    
+    .product-gallery {
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+      width: max-content;
+    }
+    
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border: 1px solid #e0e0e0;
+      position: relative;
+      width: 280px;
+      flex-shrink: 0;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .product-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: var(--secondary-color);
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      z-index: 2;
+    }
+    
+    .product-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .product-info {
+      padding: 1.5rem;
+    }
+    
+    .product-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+    
+    .product-flavor {
+      font-size: 0.9rem;
+      color: var(--secondary-color);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .product-description {
+      color: #666;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    
+    .nutrition-facts {
+      background: #f5f5f5;
+      padding: 0.8rem;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
+    }
+    
+    .nutrition-facts span {
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+    
+    .flavor-options {
+      display: flex;
+      gap: 0.5rem;
+      margin: 0.8rem 0;
+      flex-wrap: wrap;
+    }
+    
+    .flavor-option {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid #ddd;
+      transition: var(--transition);
+    }
+    
+    .flavor-option:hover, .flavor-option.active {
+      border-color: var(--primary-color);
+      transform: scale(1.1);
+    }
+    
+    .flavor-chocolate {
+      background: #6b4423;
+    }
+    
+    .flavor-vanilla {
+      background: #f3e5ab;
+    }
+    
+    .flavor-strawberry {
+      background: #fc5a8d;
+    }
+    
+    .flavor-cookies {
+      background: #d4a76a;
+    }
+    
+    /* Testimonials */
+    .protein-testimonials {
+      background: #f5f7fa;
+      padding: 4rem 0;
+      margin: 3rem 0;
+    }
+    
+    .testimonial-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      margin: 1rem;
+      position: relative;
+    }
+    
+    .testimonial-card::before {
+      content: """;
+      font-size: 5rem;
+      color: var(--primary-color);
+      opacity: 0.1;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      line-height: 1;
+    }
+    
+    /* Footer */
+    .protein-footer {
+      background: var(--dark-color);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+    }
+    
+    /* Hide scrollbar but keep functionality */
+    .product-gallery-container::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .product-gallery-container {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    
+    @media (max-width: 768px) {
+      .benefit-card {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      
+      .product-header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with Back to Home Button -->
+  <header class="product-header">
+    <div class="back-to-home">
+      <a href="test.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+    <div class="product-header-content container">
+      <h1>Premium Protein Products</h1>
+      <p>Fuel your fitness journey with our scientifically formulated protein supplements for maximum performance and recovery</p>
+    </div>
+  </header>
+  
+  <div class="container">
+    <!-- Benefits Section -->
+    <div class="product-benefits">
+      <div class="benefit-card">
+        <div class="benefit-icon">💪</div>
+        <h3>Muscle Growth</h3>
+        <p>Supports lean muscle development and recovery</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">⚡</div>
+        <h3>Fast Absorption</h3>
+        <p>Whey isolate for quick nutrient delivery</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🌿</div>
+        <h3>Clean Ingredients</h3>
+        <p>No artificial fillers or unnecessary additives</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">👍</div>
+        <h3>Great Taste</h3>
+        <p>Delicious flavors that make drinking protein enjoyable</p>
+      </div>
+    </div>
+    
+    <!-- Products Section -->
+    <h2 id="products" class="section-title" style="text-align: center; margin: 2rem 0; font-size: 2rem; color: var(--dark-color);">Our Premium Protein Selection</h2>
+    
+    <div class="product-gallery-container">
+      <div class="product-gallery">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-badge">BESTSELLER</div>
+          <img src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Whey Protein" class="product-image">
+          <div class="product-info">
+            <h3 class="product-title">Whey Protein Isolate</h3>
+            <p class="product-flavor">Chocolate Supreme</p>
+            <div class="flavor-options">
+              <div class="flavor-option flavor-chocolate active" title="Chocolate"></div>
+              <div class="flavor-option flavor-vanilla" title="Vanilla"></div>
+              <div class="flavor-option flavor-strawberry" title="Strawberry"></div>
+            </div>
+            <p class="product-description">Ultra-pure whey protein isolate with 25g protein per serving and minimal lactose.</p>
+            <div class="nutrition-facts">
+              <span>Nutrition:</span> 110 Cal | 25g Protein | 1g Fat | 2g Carbs
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Plant Protein" class="product-image">
+          <div class="product-info">
+            <h3 class="product-title">Plant Protein Blend</h3>
+            <p class="product-flavor">Vanilla Bean</p>
+            <div class="flavor-options">
+              <div class="flavor-option flavor-vanilla active" title="Vanilla"></div>
+              <div class="flavor-option flavor-chocolate" title="Chocolate"></div>
+              <div class="flavor-option flavor-cookies" title="Cookies & Cream"></div>
+            </div>
+            <p class="product-description">Vegan protein powder with pea, rice and hemp proteins for complete amino acid profile.</p>
+            <div class="nutrition-facts">
+              <span>Nutrition:</span> 120 Cal | 22g Protein | 3g Fat | 5g Carbs
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-badge">NEW</div>
+          <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Protein Bars" class="product-image">
+          <div class="product-info">
+            <h3 class="product-title">Protein Snack Bars</h3>
+            <p class="product-flavor">Variety Pack</p>
+            <div class="flavor-options">
+              <div class="flavor-option flavor-chocolate" title="Chocolate"></div>
+              <div class="flavor-option flavor-cookies" title="Cookies & Cream"></div>
+              <div class="flavor-option flavor-strawberry" title="Strawberry"></div>
+            </div>
+            <p class="product-description">Delicious high-protein bars with 20g protein and only 1g sugar.</p>
+            <div class="nutrition-facts">
+              <span>Nutrition:</span> 210 Cal | 20g Protein | 8g Fat | 18g Carbs
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1594130062354-3ba34284d3f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Casein Protein" class="product-image">
+          <div class="product-info">
+            <h3 class="product-title">Micellar Casein</h3>
+            <p class="product-flavor">Cookies & Cream</p>
+            <div class="flavor-options">
+              <div class="flavor-option flavor-cookies active" title="Cookies & Cream"></div>
+              <div class="flavor-option flavor-chocolate" title="Chocolate"></div>
+              <div class="flavor-option flavor-vanilla" title="Vanilla"></div>
+            </div>
+            <p class="product-description">Slow-digesting protein perfect for nighttime use to support muscle recovery.</p>
+            <div class="nutrition-facts">
+              <span>Nutrition:</span> 120 Cal | 24g Protein | 1g Fat | 3g Carbs
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 5 -->
+        <div class="product-card">
+          <div class="product-badge">SALE</div>
+          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Protein Pancakes" class="product-image">
+          <div class="product-info">
+            <h3 class="product-title">Protein Pancake Mix</h3>
+            <p class="product-flavor">Buttermilk</p>
+            <div class="flavor-options">
+              <div class="flavor-option flavor-vanilla active" title="Buttermilk"></div>
+              <div class="flavor-option flavor-chocolate" title="Chocolate Chip"></div>
+            </div>
+            <p class="product-description">High-protein pancake mix with 15g protein per serving. Just add water!</p>
+            <div class="nutrition-facts">
+              <span>Nutrition:</span> 190 Cal | 15g Protein | 2g Fat | 28g Carbs
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 6 -->
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="BCAAs" class="product-image">
+          <div class="product-info">
+            <h3 class="product-title">BCAA Powder</h3>
+            <p class="product-flavor">Tropical Punch</p>
+            <div class="flavor-options">
+              <div class="flavor-option flavor-strawberry active" title="Tropical"></div>
+              <div class="flavor-option flavor-vanilla" title="Lemon Lime"></div>
+            </div>
+            <p class="product-description">2:1:1 ratio of branched-chain amino acids to support muscle recovery.</p>
+            <div class="nutrition-facts">
+              <span>Nutrition:</span> 0 Cal | 5g BCAAs | Electrolytes
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Testimonials -->
+    <section class="protein-testimonials">
+      <div class="container">
+        <h2 class="section-title" style="text-align: center; margin-bottom: 2rem; color: var(--dark-color);">What Our Members Say</h2>
+        
+        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+          <div class="testimonial-card" style="max-width: 350px;">
+            <p>"The whey protein from Bright Star Gym has helped me recover faster after workouts. I've noticed significant muscle growth in just 2 months!"</p>
+            <div style="display: flex; align-items: center; margin-top: 1rem;">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul K" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 1rem;">
+              <div>
+                <h4 style="margin: 0;">Rahul K</h4>
+                <p style="margin: 0; color: var(--secondary-color);">Member since 2022</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card" style="max-width: 350px;">
+            <p>"As a vegetarian, the plant protein blend gives me all the nutrients I need. It mixes well and tastes great too!"</p>
+            <div style="display: flex; align-items: center; margin-top: 1rem;">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya M" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 1rem;">
+              <div>
+                <h4 style="margin: 0;">Priya M</h4>
+                <p style="margin: 0; color: var(--secondary-color);">Member since 2021</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="protein-footer">
+    <div class="container">
+      <h3>Bright Star Gym Supplements</h3>
+      <p>Premium protein products to complement your fitness journey</p>
+      
+      <div style="display: flex; justify-content: center; gap: 2rem; margin: 2rem 0;">
+        <a href="#" style="color: white; text-decoration: none;">Shop</a>
+        <a href="#" style="color: white; text-decoration: none;">About</a>
+        <a href="#" style="color: white; text-decoration: none;">Contact</a>
+        <a href="#" style="color: white; text-decoration: none;">FAQ</a>
+      </div>
+      
+      <p>&copy; 2023 Bright Star Gym. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple flavor selector functionality
+    document.querySelectorAll('.flavor-option').forEach(option => {
+      option.addEventListener('click', function() {
+        // Remove active class from siblings
+        this.parentNode.querySelectorAll('.flavor-option').forEach(sibling => {
+          sibling.classList.remove('active');
+        });
+        // Add active class to clicked option
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
